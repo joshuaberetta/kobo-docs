@@ -1,5 +1,7 @@
 # DigitalOcean App Platform spec for the support-bot test copy of the docs
 # site, run in parallel to support.kobotoolbox.org (which stays on gh-pages).
+# Deploys from the joshuaberetta/kobo-docs fork until DO is granted access to
+# kobotoolbox/docs; switch `repo` back then.
 #
 # Validate:  doctl apps spec validate .do/app.yaml
 # Create:    doctl apps create --spec .do/app.yaml
@@ -17,7 +19,7 @@ alerts:
 static_sites:
   - name: docs
     github:
-      repo: kobotoolbox/docs
+      repo: joshuaberetta/kobo-docs
       branch: support-bot
       deploy_on_push: true
     dockerfile_path: .do/Dockerfile
