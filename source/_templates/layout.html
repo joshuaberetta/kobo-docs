@@ -146,7 +146,7 @@
   {# Support chat widget, enabled with ?chat=true (and disabled with
      ?chat=false). The choice is kept in sessionStorage so it survives
      navigation within the tab. The widget targets whichever host served
-     widget.js. #}
+     widget.js, and opens on load when the URL also has ?open=true. #}
   <script>
     var chatParam = new URLSearchParams(window.location.search).get("chat");
     var chatEnabled = chatParam === "true";
